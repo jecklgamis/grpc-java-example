@@ -6,22 +6,20 @@ import io.grpc.InsecureServerCredentials;
 import io.grpc.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.concurrent.TimeUnit;
-
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class KeyValueStoreServer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KeyValueStoreServer.class);
     private Server server;
-    private int port;
+    private final int port;
 
     public KeyValueStoreServer(int port) {
         this.port = port;
     }
 
     public void start() throws IOException {
-        int port = 4000;
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
                 .addService(new InMemoryKeyValueStoreImpl())
                 .build()
