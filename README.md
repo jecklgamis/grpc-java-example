@@ -21,7 +21,7 @@ Docker: `docker run -p 4000:4000 jecklgamis/grpc-java-example:main`
 ## Running
 
 ```
-java -jar target/grpc-java-example 4000 
+java -jar target/grpc-java-example.jar 4000 
 ```
 
 ## Running Using Docker
