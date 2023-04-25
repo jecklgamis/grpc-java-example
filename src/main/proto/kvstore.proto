@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.jecklgamis.grpc.java.example.kvstore";
+option java_outer_classname = "KeyValueStoreProto";
+option objc_class_prefix = "HLW";
+
+
+package kvstore;
+
+message Key {
+  string key = 1;
+}
+
+message Value {
+  string value = 1;
+}
+
+message KeyValue {
+  string key = 1;
+  string value = 2;
+}
+
+message Error {
+  string error = 1;
+}
+
+message Empty {
+}
+
+
+service KeyValueStore {
+  rpc Get (Key) returns (Value) {
+  }
+  rpc Put (KeyValue) returns (Empty) {
+  }
+}
