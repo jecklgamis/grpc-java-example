@@ -8,9 +8,9 @@ Docker: `docker run -p 4000:4000 jecklgamis/grpc-java-example:main`
 
 ## Requirements
 
-* Java 11
-* GNU Make (optional)
-* Docker (optional)
+* Java 21
+* GNU Make
+* Docker 
 
 ## Building
 
