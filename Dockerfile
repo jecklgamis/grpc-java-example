@@ -1,9 +1,9 @@
 FROM ubuntu:24.04
-MAINTAINER Jerrico Gamis <jecklgamis@gmail.com>
+LABEL maintainer="Jerrico Gamis <jecklgamis@gmail.com>"
 
 RUN apt update -y && apt install -y openjdk-25-jre-headless && apt clean all && rm -rf /var/lib/apt/lists/*
 
-ENV APP_HOME /app
+ENV APP_HOME=/app
 RUN groupadd -r app && useradd -r -gapp app
 RUN mkdir -m 0755 -p ${APP_HOME}/bin
 
