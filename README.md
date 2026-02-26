@@ -8,7 +8,7 @@ Docker: `docker run -p 4000:4000 jecklgamis/grpc-java-example:main`
 
 ## Requirements
 
-* Java 21
+* Java 25
 * GNU Make
 * Docker 
 
@@ -31,6 +31,6 @@ Run `make up` or the following commands:
 ```
 mvn clean package
 docker build -t grpc-java-example:main .
-docker run -p 4000 -it grpc-java-example:main .
+docker run -p 4000:4000 -it grpc-java-example:main
 ```
 
